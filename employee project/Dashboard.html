@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Employee Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Dashboard specific styles */
+        .card {
+            margin-bottom: 20px;
+        }
+        .card-title {
+            font-size: 1.25rem;
+        }
+        .card-text {
+            font-size: 1.1rem;
+        }
+        .card-body {
+            text-align: center;
+        }
+        .stat-icon {
+            font-size: 2.5rem;
+        }
+        .stat-card {
+            transition: transform 0.2s ease-in-out;
+        }
+        .stat-card:hover {
+            transform: scale(1.05);
+        }
+        .dashboard-section {
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h4 class="text-center text-white">Employee Management</h4>
+        <img src="hrm.png" alt="Logo" class="img-fluid mb-3">
+        <a href="Dashboard.html">Dashboard</a>
+        <a href="assets.html">Assets</a>
+        <a href="leave.html">Leave</a>
+        <a href="About Us.html">About Us</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h2>Dashboard</h2>
+
+        <!-- Dashboard Stats Section -->
+        <div class="dashboard-section">
+            <div class="row">
+                <!-- Total Employees Card -->
+                <div class="col-md-3">
+                    <div class="card text-white bg-primary stat-card">
+                        <div class="card-body">
+                            <i class="bi bi-person-fill stat-icon"></i>
+                            <h5 class="card-title">Total Employees</h5>
+                            <p class="card-text" id="totalEmployees">50</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- On Leave Employees Card -->
+                <div class="col-md-3">
+                    <div class="card text-white bg-warning stat-card">
+                        <div class="card-body">
+                            <i class="bi bi-person-lines-fill stat-icon"></i>
+                            <h5 class="card-title">Employees On Leave</h5>
+                            <p class="card-text" id="onLeave">5</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pending Approvals Card -->
+                <div class="col-md-3">
+                    <div class="card text-white bg-danger stat-card">
+                        <div class="card-body">
+                            <i class="bi bi-hourglass-split stat-icon"></i>
+                            <h5 class="card-title">Pending Approvals</h5>
+                            <p class="card-text" id="pendingApprovals">2</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Active Assets Card -->
+                <div class="col-md-3">
+                    <div class="card text-white bg-success stat-card">
+                        <div class="card-body">
+                            <i class="bi bi-briefcase-fill stat-icon"></i>
+                            <h5 class="card-title">Active Assets</h5>
+                            <p class="card-text" id="activeAssets">200</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Activity Section -->
+        <div class="dashboard-section">
+            <h3>Recent Activity</h3>
+            <ul class="list-group">
+                <li class="list-group-item">Employee Gokul added on 2024-08-16 </li>
+                <li class="list-group-item">Leave request for  Raj kumar approved on 2024-09-05</li>
+                <li class="list-group-item">New asset 'Laptop - Dell XPS' added on 2024-10-03</li>
+                <li class="list-group-item">Employee  Dinesh updated on 2024-11-04</li>
+            </ul>
+        </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

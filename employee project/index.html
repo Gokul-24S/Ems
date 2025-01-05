@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h4 class="text-white">Employee Management</h4>
+        <img src="hrm.png" alt="Logo" class="img-fluid mb-3">
+        <a href="Dashboard.html">Dashboard</a>
+        <a href="Assets.html">Assets</a>
+        <a href="Leave.html">Leave</a>
+        <a href="About Us">About Us </a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h2>XYZ Tech Solutions</h2>
+        
+        <!-- Button to open the Add Employee modal -->
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addEmployeeModal">Add Employee</button>
+        <button class="btn btn-danger signout-btn" onclick="signOut()">Sign Out</button>
+
+        <!-- Add Employee Modal -->
+        <div class="modal fade" id="addEmployeeModal" tabindex="-1" aria-labelledby="addEmployeeModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addEmployeeModalLabel">Add New Employee</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="employeeForm">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Age" class="form-label">Age</label>
+                                <input type="tel" class="form-control" id="Age" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone No.</label>
+                                <input type="tel" class="form-control" id="phone" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="designation" class="form-label">Designation</label>
+                                <input type="text" class="form-control" id="designation" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="DOJ" class="form-label">DOJ</label>
+                                <input type="date" class="form-control" id="DOJ" required>
+                            </div>
+                            <button type="button" class="btn btn-success" onclick="addEmployee()">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Employee Table -->
+        <table class="table table-bordered table-hover mt-4">
+            <thead>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                    <th>Phone No</th>
+                    <th>Designation</th>
+                    <th>DOJ</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="employeeTable">
+                <!-- Dynamic Employee Rows Will Be Added Here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
